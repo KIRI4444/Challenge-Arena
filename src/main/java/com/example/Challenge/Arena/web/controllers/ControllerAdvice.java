@@ -22,7 +22,7 @@ public class ControllerAdvice {
     @ExceptionHandler(ResourceNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ExceptionBody handleResourceNotFound(ResourceNotFoundException e) {
-        return new ExceptionBody(e.getMessage());
+        return new ExceptionBody("Resource not found");
     }
 
     @ExceptionHandler(ResourceMappingException.class)

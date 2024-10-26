@@ -15,7 +15,7 @@ public class UserDto {
     private long id;
 
     @NotNull(message = "Name must be not null")
-    @Length(min = 5, max = 255, message = "Name length maust be between 5 and 255 symbols", groups = {OnUpdate.class, OnCreate.class})
+    @Length(min = 5, max = 255, message = "Name length must be between 5 and 255 symbols", groups = {OnUpdate.class, OnCreate.class})
     private String name;
 
     @NotNull(message = "Username must be not null", groups = {OnCreate.class, OnUpdate.class})
@@ -25,12 +25,12 @@ public class UserDto {
     
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotNull(message = "Password must be not null", groups = {OnCreate.class, OnUpdate.class})
-    @Length(min = 5, max = 255, groups = {OnUpdate.class, OnCreate.class})
+    @Length(min = 9, max = 255, message = "suck ants fuck zhopa", groups = {OnUpdate.class, OnCreate.class})
     private String password;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotNull(message = "Password confirmation must be not null", groups = OnCreate.class)
-    @Length(min = 7, max = 255, groups = {OnUpdate.class, OnCreate.class})
+    @Length(min = 9, max = 255, message = "suck ants fuck zhopa", groups = {OnUpdate.class, OnCreate.class})
     private String passwordConfirmation;
 
     @NotNull(message = "Goals must be not null", groups = OnUpdate.class)

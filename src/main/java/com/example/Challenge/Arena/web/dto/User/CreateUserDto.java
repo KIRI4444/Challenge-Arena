@@ -23,12 +23,12 @@ public class CreateUserDto {
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotNull(message = "Password must be not null", groups = {OnCreate.class, OnUpdate.class})
-    @Length(min = 5, max = 255, groups = {OnUpdate.class, OnCreate.class})
+    @Length(min = 7, max = 255, message = "Password must be between 7 and 255 symbols", groups = {OnUpdate.class, OnCreate.class})
     private String password;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotNull(message = "Password confirmation must be not null", groups = OnCreate.class)
-    @Length(min = 7, max = 255, groups = {OnUpdate.class, OnCreate.class})
+    @Length(min = 7, max = 255, message = "Password confirmation must be between 7 and 255 symbols", groups = {OnUpdate.class, OnCreate.class})
     private String passwordConfirmation;
 
 }
