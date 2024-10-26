@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/challenge_arena?currentSchema=challenge_arena
+    username: postgres
+    password: Ktmvil12
+    driver-class-name: org.postgresql.Driver
+
+security:
+  jwt:
+    secret: YWRha3NnaGxqR2hzZ0FLR0FLRkhBRkdBSGZrYWZ5YWdmcQ==
+    access: 3600000
+    refresh: 2592000000
