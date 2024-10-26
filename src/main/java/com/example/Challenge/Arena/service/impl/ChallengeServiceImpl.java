@@ -59,4 +59,5 @@ public class ChallengeServiceImpl implements ChallengeService {
     public Set<User> getAllUserByChallengeId(Long id) {
         return challengeRepository.getAllUserByChallengeId(id);
     }
+
 }

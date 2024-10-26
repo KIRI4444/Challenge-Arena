@@ -38,7 +38,9 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional
     public User update(User user) {
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setGoals(user.getGoals());
+        user.setDescription(user.getDescription());
+        user.setAge(user.getAge());
         userRepository.save(user);
         return user;
     }
@@ -46,11 +48,11 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional
     public User create(User user) {
-        if(userRepository.findByUsername(user.getUsername()).isPresent()) {
+        if (userRepository.findByUsername(user.getUsername()).isPresent()) {
             throw new IllegalStateException("Username already exists");
         }
 
-        if(!user.getPassword().equals(user.getPasswordConfirmation())) {
+        if (!user.getPassword().equals(user.getPasswordConfirmation())) {
             throw new IllegalStateException("Passwords do not match");
         }
 

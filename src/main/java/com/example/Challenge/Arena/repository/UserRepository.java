@@ -13,10 +13,12 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     Optional<User> findByUsername(String username);
 
-    @Query(value = """
-                    select * from challenges ch
-                    join users_challenges u_ch on ch.id = u_ch.challenge_id
-                    where u_ch.user_id = :userId
-                    """, nativeQuery = true)
+    @Query("""
+        SELECT ch FROM Challenge ch
+        JOIN ch.users u
+        WHERE u.id = :userId
+        """)
     Set<Challenge> getAllChallengesByUserId(@Param("userId") Long userId);
+
+
 }

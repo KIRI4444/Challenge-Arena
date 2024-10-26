@@ -20,4 +20,5 @@ public class Achievement implements Serializable {
 
     @ManyToMany(mappedBy = "achievements")
     private Set<User> achievements;
+
 }

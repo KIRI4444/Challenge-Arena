@@ -18,4 +18,5 @@ public interface ChallengeService {
     void delete(Long id);
 
     Set<User> getAllUserByChallengeId(Long id);
+
 }

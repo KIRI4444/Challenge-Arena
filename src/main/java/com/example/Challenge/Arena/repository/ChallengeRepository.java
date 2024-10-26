@@ -17,4 +17,5 @@ public interface ChallengeRepository extends JpaRepository<Challenge, Long> {
         where u_ch.challenge_id = :challengeId
         """, nativeQuery = true)
     Set<User> getAllUserByChallengeId(@Param("challengeId") Long challengeId);
+
 }
