@@ -13,6 +13,6 @@ public interface AchievementMapper {
 
     Achievement toEntity(AchievementDto achievementDto);
 
-    Set<AchievementDto> toDtoSet(Set<Achievement> achievements);
+    Set<AchievementDto> toDto(Set<Achievement> achievements);
 
 }

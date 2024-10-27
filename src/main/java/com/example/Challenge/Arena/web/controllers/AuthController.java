@@ -29,11 +29,6 @@ public class AuthController {
     private final UserMapper userMapper;
     private final CreateUserDtoMapper createUserDtoMapper;
 
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hello World";
-    }
-
     @PostMapping("/login")
     public JwtResponse login(@Validated @RequestBody JwtRequest loginRequest) {
         return authService.login(loginRequest);
