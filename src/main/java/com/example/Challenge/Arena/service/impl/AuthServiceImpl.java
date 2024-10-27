@@ -6,7 +6,7 @@ import com.example.Challenge.Arena.service.AuthService;
 import com.example.Challenge.Arena.service.UserService;
 import com.example.Challenge.Arena.web.dto.auth.JwtRequest;
 import com.example.Challenge.Arena.web.dto.auth.JwtResponse;
-import com.example.Challenge.Arena.web.security.expression.JwtTokenProvider;
+import com.example.Challenge.Arena.web.security.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

@@ -2,7 +2,6 @@ package com.example.Challenge.Arena.web.dto.User;
 
 import com.example.Challenge.Arena.web.dto.validation.OnCreate;
 import com.example.Challenge.Arena.web.dto.validation.OnUpdate;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;

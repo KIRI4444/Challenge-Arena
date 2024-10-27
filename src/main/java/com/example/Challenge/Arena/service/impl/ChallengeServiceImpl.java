@@ -14,7 +14,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-@Transactional(readOnly = true)
 @AllArgsConstructor
 public class ChallengeServiceImpl implements ChallengeService {
 
@@ -29,11 +28,8 @@ public class ChallengeServiceImpl implements ChallengeService {
     }
 
     @Override
+    @Transactional
     public Challenge create(Challenge challenge) {
-        if (challenge.getDate() == null) {
-            challenge.setDate(LocalDateTime.now());
-        }
-
         if (challenge.getUsers() == null) {
             challenge.setUsers(new HashSet<>());
         }
@@ -42,6 +38,7 @@ public class ChallengeServiceImpl implements ChallengeService {
     }
 
     @Override
+    @Transactional
     public Challenge update(Challenge challenge) {
         if(challenge.getDate() == null) {
             challenge.setDate(LocalDateTime.now());
@@ -51,13 +48,21 @@ public class ChallengeServiceImpl implements ChallengeService {
     }
 
     @Override
+    @Transactional
     public void delete(Long id) {
          challengeRepository.deleteById(id);
     }
 
     @Override
+    @Transactional
     public Set<User> getAllUserByChallengeId(Long id) {
         return challengeRepository.getAllUserByChallengeId(id);
     }
 
+    @Override
+    @Transactional
+    public Set<Challenge> getChallengesByDate(LocalDateTime dateFrom, LocalDateTime dateTo) {
+        Set<Challenge> challenges = challengeRepository.findByDateBetween(dateFrom, dateTo);
+        return challenges;
+    }
 }

@@ -80,12 +80,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public void delete(Long id) {
-        userRepository.deleteById(id);
-    }
-
-    @Override
-    @Transactional
     public void save(User user) {
         userRepository.save(user);
     }

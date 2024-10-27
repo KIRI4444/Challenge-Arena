@@ -5,10 +5,13 @@ import com.example.Challenge.Arena.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.Set;
 
+@Repository
 public interface ChallengeRepository extends JpaRepository<Challenge, Long> {
 
     @Query(value = """
@@ -18,4 +21,5 @@ public interface ChallengeRepository extends JpaRepository<Challenge, Long> {
         """, nativeQuery = true)
     Set<User> getAllUserByChallengeId(@Param("challengeId") Long challengeId);
 
+    Set<Challenge> findByDateBetween(LocalDateTime dateFrom, LocalDateTime dateTo);
 }

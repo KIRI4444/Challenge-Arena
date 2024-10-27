@@ -4,7 +4,6 @@ import com.example.Challenge.Arena.domain.user.User;
 import com.example.Challenge.Arena.service.AuthService;
 import com.example.Challenge.Arena.service.UserService;
 import com.example.Challenge.Arena.web.dto.User.CreateUserDto;
-import com.example.Challenge.Arena.web.dto.User.UserDto;
 import com.example.Challenge.Arena.web.dto.auth.JwtRequest;
 import com.example.Challenge.Arena.web.dto.auth.JwtResponse;
 import com.example.Challenge.Arena.web.dto.auth.RefreshRequest;

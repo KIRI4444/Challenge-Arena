@@ -22,8 +22,6 @@ public interface UserService {
 
     Set<Challenge> getAllChallengesByUserId(Long id);
 
-    void delete(Long id);
-
     void joinChallenge(Long challengeId, Long userId);
 
     void removeChallenge(Long challengeId, Long userId);

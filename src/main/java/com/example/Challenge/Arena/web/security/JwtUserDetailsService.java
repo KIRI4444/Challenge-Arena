@@ -1,4 +1,4 @@
-package com.example.Challenge.Arena.web.security.expression;
+package com.example.Challenge.Arena.web.security;
 
 import com.example.Challenge.Arena.domain.user.User;
 import com.example.Challenge.Arena.service.UserService;

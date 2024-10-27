@@ -74,4 +74,6 @@ public class UserController {
         userService.removeChallenge(interactionChallengeDto.getChallengeId(), interactionChallengeDto.getUserId());
         return interactionChallengeDto;
     }
+
+
 }

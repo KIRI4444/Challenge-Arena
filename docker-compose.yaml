@@ -1,0 +1,23 @@
+services:
+  app:
+    build:
+      context: .
+    container_name: challengeArena
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/challenge_arena?currentSchema=challenge_arena
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=Ktmvil12
+    ports:
+      - '8082:8081'
+
+  db:
+    image: postgres:15.1-alpine
+    container_name: postgres1
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Ktmvil12
+      - POSTGRES_DB=challenge_arena
+    volumes:
+      - ./src/main/resources/db-init:/docker-entrypoint-initdb.d

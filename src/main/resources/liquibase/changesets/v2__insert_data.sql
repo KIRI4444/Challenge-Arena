@@ -1,17 +1,20 @@
 insert into users (name, username, password, goals, age, description, sex)
-values ('Kirill Popov', 'kiri4444', '$2a$12$bmiTiiNi8Zy/qXRDqfLlRepWW3tDWYJVIpVS3b4fJwfGolIyxBZaC
-', 'Earn money, get plane', 19, 'Playboy, Philantrop, Legend, Gand Back Programmer', 1),
-       ('Dmitriy Kvitko', 'DimarsekShkere', '$2a$12$UihUIBizOlzMYJ0k9qOWkepu4ZSbBRoj2V2dcH3zi1UMmOnrhQNve
-', 'Be cool programmer, smoke weed', 19, 'Gay Front Programmer', 0),
-       ('Mark Granovskiy', 'MarkSisya', '$2a$12$YAcrl1yC9kkKFXJsd76c/un3YfFtWaqTlm8S3YcTjNMZoeaqwt5C6
-', 'Be the best Ogetto front programmer', 19, 'Sisyan', 0);
+values
+    ('Admin Test1', 'test1test1', '$2a$10$9bae.ZzC2.64sJAJvm04W.YOGinWYUHQnx3MB1t2SHS2E4E9i0/X.',
+    'Earn money, get plane', 19, 'Playboy, Philantrop, Legend, Back Programmer', 1),
+
+    ('User Test2', 'test2test2', '$2a$10$9bae.ZzC2.64sJAJvm04W.YOGinWYUHQnx3MB1t2SHS2E4E9i0/X.',
+     'Be cool programmer', 19, 'frontend dev', 0),
+
+    ('User Test2', 'test2test2', '$2a$10$9bae.ZzC2.64sJAJvm04W.YOGinWYUHQnx3MB1t2SHS2E4E9i0/X.',
+     'Be the best Ogetto front programmer', 19, 'yra pobeda', 0);
 
 insert into challenges (description, rules, title, type, date)
 values ('Челлендж чтобы кайфовать', 'Нужно вылить на себя ведро ледяной воды', 'Ice bucket challenge', 'Одиночный',
         '26-10-2024 16:00'),
        ('Челлендж для сплочения коллектива', 'Нужно сфоткаться с коллегами', 'Групповое фото', 'Групповой',
         '27-12-2024 18:00'),
-       ('Дает вам новые знакомства',
+       ('Новые знакомства',
         'Нужно встретиться со случайным коллегой со случайного отдела и сходить выпить кофе', 'Рандом кофе', 'Парный',
         '30-11-2024 14:30');
 

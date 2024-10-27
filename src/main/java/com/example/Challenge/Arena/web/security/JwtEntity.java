@@ -1,4 +1,4 @@
-package com.example.Challenge.Arena.web.security.expression;
+package com.example.Challenge.Arena.web.security;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

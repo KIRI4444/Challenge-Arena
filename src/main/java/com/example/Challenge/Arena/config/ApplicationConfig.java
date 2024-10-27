@@ -1,7 +1,7 @@
 package com.example.Challenge.Arena.config;
 
-import com.example.Challenge.Arena.web.security.expression.JwtTokenFilter;
-import com.example.Challenge.Arena.web.security.expression.JwtTokenProvider;
+import com.example.Challenge.Arena.web.security.JwtTokenFilter;
+import com.example.Challenge.Arena.web.security.JwtTokenProvider;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;

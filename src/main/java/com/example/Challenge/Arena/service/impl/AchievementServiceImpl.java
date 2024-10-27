@@ -39,12 +39,6 @@ public class AchievementServiceImpl implements AchievementService {
 
     @Override
     @Transactional
-    public void delete(Long id) {
-        achievementRepository.deleteById(id);
-    }
-
-    @Override
-    @Transactional
     public Set<Achievement> getAllAchievementsByUserId(Long id) {
         return achievementRepository.getAllUserAchievements(id);
     }

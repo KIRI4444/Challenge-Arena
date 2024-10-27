@@ -4,6 +4,7 @@ import com.example.Challenge.Arena.domain.challenge.Challenge;
 import com.example.Challenge.Arena.domain.user.User;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Service
@@ -18,5 +19,7 @@ public interface ChallengeService {
     void delete(Long id);
 
     Set<User> getAllUserByChallengeId(Long id);
+
+    Set<Challenge> getChallengesByDate(LocalDateTime dateFrom, LocalDateTime dateTo);
 
 }
